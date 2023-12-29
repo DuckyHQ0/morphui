@@ -4,7 +4,7 @@
   "description": "A modern UI kit.",
   "main": "src/index.ts",
   "scripts": {
-    "tailwind": "npx tailwindcss -i ./tw-input.css -o ./src/styles/tailwind.css --watch",
+    "tailwind": "npx tailwindcss -i ./tw-input.css -o ./src/tailwind.css --watch",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },

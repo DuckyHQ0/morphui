@@ -1,4 +1,5 @@
 import React, {MouseEventHandler} from "react";
+import "../../tailwind.css"
 
 interface ButtonProps {
 	text: string;
@@ -9,6 +10,6 @@ interface ButtonProps {
 
 export const Button = ({text, type, disabled, onClick}: ButtonProps) => {
     return (
-        <button className="bg-red p-32" disabled={disabled}>{text}</button>
+        <button className="bg-red p-128" disabled={disabled}>{text}</button>
     )
 }
