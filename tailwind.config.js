@@ -31,6 +31,7 @@ module.exports = {
 			18: "18px",
 			16: "16px",
 			12: "12px",
+			10: "10px",
 			8: "8px",
 			6: "6px",
 			4: "4px",
@@ -48,7 +49,8 @@ module.exports = {
 		extend: {
 			colors: {
 				// ui styles
-				"stroke-1": "rgb(255,255,255,0.1)",
+				"stroke-1": "rgb(255,255,255,0.09)",
+				"stroke-2": "rgb(255,255,255,0.04)",
 				"text-1": "#DEDEDE",
 				// colours
 				selected: "#0db7ff",

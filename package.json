@@ -40,5 +40,8 @@
     "storybook": "^7.6.6",
     "tailwindcss": "^3.4.0",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.0"
   }
 }
