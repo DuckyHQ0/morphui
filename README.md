@@ -16,9 +16,12 @@ npm registry is coming soon.
 
 Download the source code, and [Node.js](https://nodejs.org/en)
 
-Run `npm i` inside the root folder.
+Then run these commands in the root folder with your terminal:
+```bash
+npm install
 
-Then run `npm run tailwind` in the main terminal, then `npm run storybook` inside a separate terminal.
+npm run storybook
+```
 
 ## 🏛️ License and Contribution
 

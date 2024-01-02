@@ -17,7 +17,7 @@ const variants = cva(["rounded-in", "text-body", "text-white", "border", "enable
 		},
 		content: {
 			text: ["px-24", "py-8"],
-			textIcon: ["px-24", "py-8"],
+			textIcon: ["px-20", "py-8"],
 			icon: ["px-12", "py-10"]
 		}
 	},

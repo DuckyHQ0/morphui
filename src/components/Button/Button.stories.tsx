@@ -25,6 +25,8 @@ Primary.args = {
 	text: "Primary Solid",
 };
 
+// Secondary
+
 export const Secondary: Story = (args) => <Button {...args} />;
 Secondary.args = {
 	type: "solid",

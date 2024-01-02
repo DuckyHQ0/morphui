@@ -614,13 +614,13 @@ video {
   background-color: rgb(245 37 74 / var(--tw-bg-opacity));
 }
 
-.bg-white\/\[\.4\] {
-  background-color: rgb(255 255 255 / .4);
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-white\/\[\.4\] {
+  background-color: rgb(255 255 255 / .4);
 }
 
 .p-128 {
@@ -634,6 +634,11 @@ video {
 .px-12 {
   padding-left: 12px;
   padding-right: 12px;
+}
+
+.px-20 {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .px-24 {
