@@ -1,12 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*"],
-  theme: {
+	content: ["./src/**/*"],
+	theme: {
 		fontSize: {
-			"0": "100px",
-			"1": "50px",
-			"2": "36px",
-			"3": "21px",
+			0: "100px",
+			1: "50px",
+			2: "36px",
+			3: "21px",
 			"strong-body": "16px",
 			body: "15px",
 			sub: "12.8px",
@@ -43,18 +43,24 @@ module.exports = {
 			32: "32px",
 			out: "16px",
 			in: "9px",
+			small: "7px",
 		},
 		fontFamily: {
 			sans: ["Outfit"],
 		},
 		boxShadow: {
-			'fg': '0px -6px 24px -2px rgba(0, 0, 0, 0.14) inset, 0px 0px 56px 0px rgba(0, 0, 0, 0.08)',
+			fg: "0px -6px 24px -2px rgba(0, 0, 0, 0.14) inset, 0px 0px 56px 0px rgba(0, 0, 0, 0.08)",
 		},
 		extend: {
+			backgroundImage: {
+				fg: "linear-gradient(to bottom,rgba(122,122,122,0.13),rgba(122,122,122,0.05))",
+				"fg-disabled":
+					"linear-gradient(to bottom,rgba(122,122,122,0.05),rgba(122,122,122,0.07))",
+			},
 			colors: {
 				// ui styles
-				"stroke-1": "rgb(255,255,255,0.09)",
-				"stroke-2": "rgb(255,255,255,0.04)",
+				"stroke-1": "rgba(255,255,255,0.09)",
+				"stroke-2": "rgba(255,255,255,0.04)",
 				"text-1": "#DEDEDE",
 				// colours
 				selected: "#0db7ff",
@@ -72,6 +78,5 @@ module.exports = {
 			},
 		},
 	},
-  plugins: [],
-}
-
+	plugins: [require("tailwindcss-radix")()],
+};

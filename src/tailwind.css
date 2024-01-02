@@ -580,13 +580,21 @@ video {
   display: none;
 }
 
+.h-24 {
+  height: 24px;
+}
+
+.h-\[42px\] {
+  height: 42px;
+}
+
 .h-fit {
   height: -moz-fit-content;
   height: fit-content;
 }
 
-.h-\[42px\] {
-  height: 42px;
+.w-24 {
+  width: 24px;
 }
 
 .w-fit {
@@ -646,12 +654,20 @@ video {
   gap: 6px;
 }
 
+.gap-8 {
+  gap: 8px;
+}
+
 .rounded-in {
   border-radius: 9px;
 }
 
 .rounded-out {
   border-radius: 16px;
+}
+
+.rounded-small {
+  border-radius: 7px;
 }
 
 .border {
@@ -698,11 +714,11 @@ video {
 }
 
 .border-stroke-1 {
-  border-color: rgb(255,255,255,0.09);
+  border-color: rgba(255,255,255,0.09);
 }
 
 .border-stroke-2 {
-  border-color: rgb(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.04);
 }
 
 .border-white {
@@ -729,6 +745,11 @@ video {
 
 .border-yellow\/\[\.35\] {
   border-color: rgb(234 202 34 / .35);
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-brand-blue {
@@ -800,12 +821,21 @@ video {
   background-color: rgb(234 202 34 / .11);
 }
 
+.bg-fg {
+  background-image: linear-gradient(to bottom,rgba(122,122,122,0.13),rgba(122,122,122,0.05));
+}
+
 .p-128 {
   padding: 128px;
 }
 
 .p-32 {
   padding: 32px;
+}
+
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .px-10 {
@@ -828,24 +858,14 @@ video {
   padding-right: 24px;
 }
 
-.py-10 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.py-8 {
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
 .px-4 {
   padding-left: 4px;
   padding-right: 4px;
 }
 
-.px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
+.py-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .py-12 {
@@ -853,8 +873,18 @@ video {
   padding-bottom: 12px;
 }
 
+.py-8 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
 .text-body {
   font-size: 15px;
+}
+
+.text-brand-blue {
+  --tw-text-opacity: 1;
+  color: rgb(13 183 255 / var(--tw-text-opacity));
 }
 
 .text-text-1 {
@@ -879,6 +909,12 @@ video {
 
 .outline {
   outline-style: solid;
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .duration-150 {
@@ -1142,4 +1178,16 @@ video {
 
 .disabled\:text-white\/30:disabled {
   color: rgb(255 255 255 / 0.3);
+}
+
+.radix-disabled\:cursor-not-allowed[data-disabled] {
+  cursor: not-allowed;
+}
+
+.radix-disabled\:bg-fg-disabled[data-disabled] {
+  background-image: linear-gradient(to bottom,rgba(122,122,122,0.05),rgba(122,122,122,0.07));
+}
+
+.radix-disabled\:text-brand-blue\/30[data-disabled] {
+  color: rgb(13 183 255 / 0.3);
 }

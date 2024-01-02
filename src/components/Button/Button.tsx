@@ -38,7 +38,7 @@ const variants = cva(
 				colour: "primary",
 				varientType: "solid",
 				className: [
-					"bg-brand-blue/75 border-stroke-1 text-white",
+					"bg-brand-blue/75 border-stroke-2 text-white",
 					"enabled:hover:bg-brand-blue enabled:active:bg-brand-blue/50",
 					"disabled:bg-brand-blue/25",
 				],
@@ -66,7 +66,7 @@ const variants = cva(
 				colour: "secondary",
 				varientType: "solid",
 				className: [
-					"bg-white/[.04] border-stroke-1 text-white",
+					"bg-white/[.04] border-stroke-2 text-white",
 					"enabled:hover:bg-white/[.08] enabled:active:bg-white/[.02]",
 					"disabled:bg-transparent",
 				],
@@ -94,7 +94,7 @@ const variants = cva(
 				colour: "success",
 				varientType: "solid",
 				className: [
-					"bg-green/75 border-stroke-1 text-white",
+					"bg-green/75 border-stroke-2 text-white",
 					"enabled:hover:bg-green enabled:active:bg-green/50",
 					"disabled:bg-green/25",
 				],
@@ -122,7 +122,7 @@ const variants = cva(
 				colour: "warning",
 				varientType: "solid",
 				className: [
-					"bg-yellow/75 border-stroke-1 text-white",
+					"bg-yellow/75 border-stroke-2 text-white",
 					"enabled:hover:bg-yellow enabled:active:bg-yellow/50",
 					"disabled:bg-yellow/25",
 				],
@@ -150,7 +150,7 @@ const variants = cva(
 				colour: "danger",
 				varientType: "solid",
 				className: [
-					"bg-red/75 border-stroke-1 text-white",
+					"bg-red/75 border-stroke-2 text-white",
 					"enabled:hover:bg-red enabled:active:bg-red/50",
 					"disabled:bg-red/25",
 				],
