@@ -3,7 +3,7 @@ import {cva, VariantProps} from "class-variance-authority";
 
 const variants = cva(
 	[
-		"text-body border w-fit h-fit shadow-fg",
+		"text-body border w-fit h-[42px] shadow-fg flex items-center gap-6",
 		"ease-out duration-150",
 		"enabled:hover:-translate-y-[2px] enabled:active:translate-y-6",
 		"disabled:cursor-not-allowed disabled:text-white/30",
@@ -23,9 +23,9 @@ const variants = cva(
 				danger: [],
 			},
 			contentInside: {
-				text: ["px-24 py-8"],
-				textIcon: ["px-20 py-8"],
-				icon: ["px-12 py-8"],
+				text: ["px-24"],
+				textIcon: ["px-20"],
+				icon: ["px-12"],
 			},
 			roundedLevel: {
 				in: ["rounded-in"],
@@ -187,11 +187,9 @@ export type ButtonVariantProps = VariantProps<typeof variants>;
 
 export interface ButtonProps
 	extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-		VariantProps<typeof variants> {
-	text?: string;
-}
+		VariantProps<typeof variants> {}
 export const Button = ({
-	text,
+	children,
 	varientType,
 	colour,
 	contentInside,
@@ -205,7 +203,7 @@ export const Button = ({
 			onClick={onClick}
 			disabled={disabled}
 		>
-			{text}
+			{children}
 		</button>
 	);
 };

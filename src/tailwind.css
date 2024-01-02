@@ -585,6 +585,10 @@ video {
   height: fit-content;
 }
 
+.h-\[42px\] {
+  height: 42px;
+}
+
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -610,6 +614,18 @@ video {
   flex-direction: column;
 }
 
+.content-center {
+  align-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
 .gap-12 {
   gap: 12px;
 }
@@ -624,6 +640,10 @@ video {
 
 .gap-24 {
   gap: 24px;
+}
+
+.gap-6 {
+  gap: 6px;
 }
 
 .rounded-in {
@@ -816,6 +836,21 @@ video {
 .py-8 {
   padding-top: 8px;
   padding-bottom: 8px;
+}
+
+.px-4 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.py-12 {
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .text-body {
