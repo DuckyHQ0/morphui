@@ -7,32 +7,37 @@ import {Button} from "./Button";
 const meta: Meta<typeof Button> = {
 	component: Button,
 	title: "Button",
-	argTypes: {},
+	argTypes: {
+		varientType: {
+			options: ["solid", "soft", "outline"],
+			control: {type: "radio"},
+		},
+		colour: {
+			options: ["primary", "secondary", "success", "warning", "danger"],
+			control: {type: "radio"},
+		},
+		contentInside: {
+			options: ["text", "textIcon", "icon"],
+			control: {type: "radio"},
+		},
+		roundedLevel: {
+			options: ["in", "out"],
+			control: {type: "radio"},
+		},
+	},
 };
 export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-// Primary
+// Button Render
 
-export const Primary: Story = (args) => <Button {...args} />;
-Primary.args = {
-	type: "solid",
+export const Default: Story = (args) => <Button {...args} />;
+Default.args = {
+	varientType: "solid",
 	colour: "primary",
-	content: "text",
+	contentInside: "text",
 	roundedLevel: "in",
 	disabled: false,
-	text: "Primary Solid",
-};
-
-// Secondary
-
-export const Secondary: Story = (args) => <Button {...args} />;
-Secondary.args = {
-	type: "solid",
-	colour: "secondary",
-	content: "text",
-	roundedLevel: "in",
-	disabled: false,
-	text: "Secondary Solid",
+	text: "Button",
 };

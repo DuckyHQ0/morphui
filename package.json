@@ -5,8 +5,6 @@
   "main": "src/index.ts",
   "scripts": {
     "storybook": "concurrently \"storybook dev -p 6006\" \"npx tailwindcss -i ./tw-input.css -o ./src/tailwind.css --watch\"",
-    "tailwind": "npx tailwindcss -i ./tw-input.css -o ./src/tailwind.css --watch",
-    "storybooka": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "keywords": [
