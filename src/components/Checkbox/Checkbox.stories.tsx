@@ -15,4 +15,4 @@ type Story = StoryObj<typeof Checkbox>;
 // Render Checkbox
 
 export const Default: Story = (args) => <Checkbox {...args} />;
-Default.args = {label: "Label", disabled: false, defaultChecked: true};
+Default.args = {label: "Label", disabled: false, defaultChecked: true, required: false};

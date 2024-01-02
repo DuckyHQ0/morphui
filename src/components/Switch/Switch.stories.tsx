@@ -15,4 +15,4 @@ type Story = StoryObj<typeof Switch>;
 // Render Switch
 
 export const Default: Story = (args) => <Switch {...args} />;
-Default.args = {label: "Label", disabled: false};
+Default.args = {label: "Label", disabled: false, defaultChecked: true, required: false};
