@@ -1,4 +1,5 @@
-import '../src/tailwind.css';
+import "../src/tailwind.css";
+import "../storybook.css";
 import type { Preview } from "@storybook/react";
 
 const preview: Preview = {
@@ -11,11 +12,11 @@ const preview: Preview = {
       },
     },
     backgrounds: {
-      default: 'default',
+      default: "default",
       values: [
         {
-          name: 'default',
-          value: '#0f0f0f',
+          name: "default",
+          value: "#0f0f0f",
         },
       ],
     },
