@@ -16,7 +16,7 @@ export const Checkbox = ({
   return (
     <div className="flex gap-8">
       <RadixCheckbox.Root
-        className="w-24 h-24 bg-fg radix-disabled:bg-fg-disabled radix-disabled:cursor-not-allowed border border-stroke-2 rounded-small flex justify-center items-center"
+        className="w-24 h-24 bg-fg-2 radix-disabled:bg-fg-2-disabled radix-disabled:cursor-not-allowed border border-stroke-2 rounded-small flex justify-center items-center"
         defaultChecked={defaultChecked}
         disabled={disabled}
         required={required}

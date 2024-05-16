@@ -1,30 +1,19 @@
-# MorphUI (WIP)
+# MorphUI
+
+## Version 0.2 Beta (Unfinished!)
 
 A modern, open source React UI kit for DuckyHQ projects.
 
-This UI kit uses depth by adding shadows, gradients, and glass morphism effects. It's intended for dark mode only design, and it's fully accessible.
+Figma design file with components is [here](https://www.figma.com/community/file/1322693203140901897/morphui-wip).
 
-Built with [React](https://react.dev/), [Radix Primitives](https://github.com/radix-ui/primitives), [Tailwind](https://tailwindcss.com/), and [Storybook](https://storybook.js.org/).
+### How this project works
 
-### This project is unfinished!
+This is using Next.js, and Storybook. You're gonna wanna use `npm run storybook` to start the dev server. All the components are inside the components folder. And the stories are separate, in the stories folder.
 
-It's not usable yet. Figma design file with components is [here](https://www.figma.com/community/file/1322693203140901897/morphui-wip). (also unfinished)
+### Installation for your own projects
 
-npm registry is coming soon.
+This will not be an NPM module. What you have to do is get this source code (clone, or download zip), then copy the Tailwind input file (/app/globals.css), the Tailwind config (tailwind.config.ts), then the entire components folder, all into your own project, replacing the old files. Then just use the components like you normally would, and the Tailwind classes.
 
-## 🏃‍♂️ Development Server
+### Tailwind config info
 
-Download the source code, and [Node.js](https://nodejs.org/en)
-
-Then run these commands in the root folder with your terminal:
-```bash
-npm install
-
-npm run storybook
-```
-
-## 🏛️ License and Contribution
-
-Feel free to contribute to this UI kit.
-
-Morph UI is licensed under [GPL-3.0](/LICENSE.txt).
+The spacing system is literal, so `p-32` equals exactly 32 pixels: `padding: 32px;`.

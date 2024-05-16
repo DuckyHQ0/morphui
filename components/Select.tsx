@@ -40,7 +40,7 @@ export const Select = ({
       required={required}
     >
       <RadixSelect.Trigger
-        className="inline-flex items-center justify-center text-body rounded-in h-fit px-24 py-12 gap-32 bg-fg border-stroke-2 text-text-1 shadow-fg"
+        className="inline-flex items-center justify-center text-body rounded-in h-fit px-24 py-12 gap-32 bg-fg-2 border-stroke-2 text-text-1 shadow-fg-2"
         aria-label={label}
       >
         <RadixSelect.Value placeholder={label} />
@@ -49,14 +49,14 @@ export const Select = ({
         </RadixSelect.Icon>
       </RadixSelect.Trigger>
       <RadixSelect.Portal>
-        <RadixSelect.Content className="overflow-hidden bg-fg rounded-in backdrop-blur-main border border-stroke-2 shadow-fg text-text-1 rounded-md">
-          <RadixSelect.ScrollUpButton className="flex items-center justify-center h-fit py-6 bg-fg backdrop-blur-sm cursor-default border-b border-stroke-2">
+        <RadixSelect.Content className="overflow-hidden bg-fg-2 rounded-in backdrop-blur-main border border-stroke-2 shadow-fg-2 text-text-1 rounded-md">
+          <RadixSelect.ScrollUpButton className="flex items-center justify-center h-fit py-6 bg-fg-2 backdrop-blur-sm cursor-default border-b border-stroke-2">
             <HiChevronUp />
           </RadixSelect.ScrollUpButton>
           <RadixSelect.Viewport className="flex flex-col gap-16 px-24 py-12">
             {children}
           </RadixSelect.Viewport>
-          <RadixSelect.ScrollDownButton className="flex items-center justify-center h-fit py-6 bg-fg backdrop-blur-sm cursor-default border-t border-stroke-2">
+          <RadixSelect.ScrollDownButton className="flex items-center justify-center h-fit py-6 bg-fg-2 backdrop-blur-sm cursor-default border-t border-stroke-2">
             <HiChevronDown />
           </RadixSelect.ScrollDownButton>
         </RadixSelect.Content>

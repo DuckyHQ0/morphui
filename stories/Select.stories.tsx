@@ -5,7 +5,7 @@ import {
   SelectItem,
   SelectLabel,
   SelectSeparator,
-} from "./Select";
+} from "../components/Select";
 import React from "react";
 
 // Meta
@@ -13,6 +13,7 @@ import React from "react";
 const meta: Meta<typeof Select> = {
   component: Select,
   title: "Select",
+  tags: ["autodocs"],
 };
 export default meta;
 
@@ -20,7 +21,30 @@ type Story = StoryObj<typeof Select>;
 
 // Render Select
 
-export const Default: Story = (args) => (
+export const Default: Story = (
+  args: React.JSX.IntrinsicAttributes & {
+    label: string;
+    children: React.ReactNode; // Render Select
+    // Render Select
+    defaultValue?: string | undefined;
+    value?: string | undefined;
+    onValueChange?:
+      | ((
+          // Meta
+          value: string
+        ) => void)
+      | undefined;
+    defaultOpen?: boolean | undefined;
+    open?: boolean | undefined;
+    onOpenChange?: ((open: boolean) => void) | undefined;
+    name?:
+      | string
+      // Render Select
+      | undefined;
+    disabled?: boolean | undefined;
+    required?: boolean | undefined;
+  }
+) => (
   <Select {...args}>
     <SelectGroup>
       <SelectItem value="1.0">v1.0</SelectItem>
@@ -35,7 +59,22 @@ Default.args = { label: "Version" };
 
 // Render Select
 
-export const Advanced: Story = (args) => (
+export const Advanced: Story = (
+  args: React.JSX.IntrinsicAttributes & {
+    label: string;
+    children: React.ReactNode; // Render Select
+    // Render Select
+    defaultValue?: string | undefined;
+    value?: string | undefined;
+    onValueChange?: ((value: string) => void) | undefined;
+    defaultOpen?: boolean | undefined;
+    open?: boolean | undefined;
+    onOpenChange?: ((open: boolean) => void) | undefined;
+    name?: string | undefined;
+    disabled?: boolean | undefined;
+    required?: boolean | undefined;
+  }
+) => (
   <Select {...args}>
     <SelectGroup>
       <SelectLabel>Fruits</SelectLabel>

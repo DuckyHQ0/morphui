@@ -15,7 +15,7 @@ export const Switch = ({
   return (
     <div className="flex gap-8 items-center">
       <RadixSwitch.Root
-        className="w-64 h-36 rounded-[999px] bg-fg border border-stroke-2 radix-disabled:cursor-not-allowed radix-disabled:bg-fg-disabled"
+        className="w-64 h-36 rounded-[999px] bg-fg-2 border border-stroke-2 radix-disabled:cursor-not-allowed radix-disabled:bg-fg-2-disabled"
         disabled={disabled}
         defaultChecked={defaultChecked}
         required={required}

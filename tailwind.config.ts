@@ -1,15 +1,22 @@
+import { WiHot } from "react-icons/wi";
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*"],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./stories/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     fontSize: {
-      0: "100px",
-      1: "50px",
-      2: "36px",
-      3: "21px",
+      h0: "100px",
+      h1: "50px",
+      h2: "36px",
+      h3: "21px",
       "strong-body": "16px",
       body: "15px",
-      sub: "12.8px",
+      sub: "12.4px",
       mono: "13px",
     },
     spacing: {
@@ -45,17 +52,27 @@ module.exports = {
       in: "9px",
       small: "7px",
     },
-    fontFamily: {
-      sans: ["Outfit"],
-    },
     boxShadow: {
-      fg: "0px -6px 24px -2px rgba(0, 0, 0, 0.14) inset, 0px 0px 56px 0px rgba(0, 0, 0, 0.08)",
+      "fg-2":
+        "0px -6px 24px -2px rgba(0, 0, 0, 0.14) inset, 0px 0px 56px 0px rgba(0, 0, 0, 0.08)",
+    },
+    fontFamily: {
+      // Don't use normal tailwind fontsize or fontfamily in your classnames, use the @apply values found in globals.css
+      sans: ["var(--font-outfit)"],
+      mono: ["var(--font-jetbrains-mono)"],
     },
     extend: {
       backgroundImage: {
-        fg: "linear-gradient(to bottom,rgba(122,122,122,0.13),rgba(122,122,122,0.05))",
-        "fg-disabled":
-          "linear-gradient(to bottom,rgba(122,122,122,0.05),rgba(122,122,122,0.07))",
+        "fg-1":
+          "linear-gradient(to bottom,rgba(15, 15, 15, 0.75),rgba(15, 15, 15, 0.9))",
+        "fg-2":
+          "linear-gradient(to bottom,rgba(122,122,122,0.13),rgba(122,122,122,0.05))",
+        "fg-2-active":
+          "linear-gradient(to bottom,rgba(122,122,122,0.27),rgba(122,122,122,0.18))",
+        "fg-2-disabled":
+          "linear-gradient(to bottom,rgba(122,122,122,0.03),rgba(122,122,122,0.07))",
+        "fg-3":
+          "linear-gradient(to bottom,rgba(12, 12, 12, 0.45),rgba(0, 0, 0, 0.5))",
       },
       colors: {
         // ui styles
@@ -71,14 +88,18 @@ module.exports = {
         "brand-blue": "#0db7ff",
         "brand-blue-2": "#007bff",
         "brand-purple": "#4e00ff",
-        red: "#F5254A",
-        yellow: "#EACA22",
-        green: "#26D958",
+        danger: "#F5254A",
+        warning: "#EACA22",
+        success: "#26D958",
         blue: "#0784F6",
         purple: "#BC4DFF",
+        white: "#ffffff",
+        black: "#000000",
       },
       backdropBlur: {
-        main: "32px",
+        "fg-1": "128px",
+        "fg-2": "32px",
+        "fg-3": "32px",
       },
     },
   },
