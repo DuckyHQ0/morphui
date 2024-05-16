@@ -8,7 +8,7 @@ module.exports = {
   ],
   theme: {
     fontSize: {
-      // Instead of using text-h1, use the classes found in the tailwind input file (/app/globals.css)
+      // Instead of using text-h1, etc, use the classes found in the tailwind input file (/app/globals.css)
       h0: "100px",
       h1: "50px",
       h2: "36px",
@@ -56,7 +56,7 @@ module.exports = {
         "0px -6px 24px -2px rgba(0, 0, 0, 0.14) inset, 0px 0px 56px 0px rgba(0, 0, 0, 0.08)",
     },
     fontFamily: {
-      // Instead of using font-mono, use the classes found in the tailwind input file (/app/globals.css)
+      // Instead of using font-mono, etc, use the classes found in the tailwind input file (for nextjs, /app/globals.css)
       sans: ["var(--font-outfit)"],
       mono: ["var(--font-jetbrains-mono)"],
     },
@@ -99,6 +99,20 @@ module.exports = {
         "fg-1": "128px",
         "fg-2": "32px",
         "fg-3": "32px",
+      },
+      keyframes: {
+        "scale-in": {
+          from: { opacity: "0", transform: " scale(0.95)" },
+          to: { opacity: "1", transform: "scale(1)" },
+        },
+        "scale-out": {
+          from: { opacity: "1", transform: "scale(1)" },
+          to: { opacity: "0", transform: "scale(0.95)" },
+        },
+      },
+      animation: {
+        "scale-in": "scale-in 150ms ease-out",
+        "scale-out": "scale-out 150ms ease-out",
       },
     },
   },

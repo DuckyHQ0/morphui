@@ -27,6 +27,7 @@ export const RadioGroup = ({
       value={value}
       onValueChange={onValueChange}
       defaultValue={defaultValue}
+      name={name}
       className="flex flex-col gap-12"
     >
       {children}

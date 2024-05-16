@@ -17,3 +17,35 @@ This will not be an NPM module. What you have to do is get this source code (clo
 ### Tailwind config info
 
 The spacing system is literal, so `p-32` equals exactly 32 pixels: `padding: 32px;`.
+
+### Fonts
+
+#### Next.js
+
+Put this code inside your `layout.tsx`:
+
+```tsx
+import { Outfit, JetBrains_Mono } from "next/font/google";
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  weight: ["400", "500", "600", "700"],
+});
+
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+  weight: ["400"],
+});
+```
+
+And add this className to your main body tag:
+
+```tsx
+className={`${jetBrainsMono.variable} ${outfit.variable} font-sans text-text-1`}
+```
+
+#### Other frameworks
+
+You could use Google Fonts, or FontSource, but make sure the fonts work with Tailwind CSS, so they can be used with the fontFamily definitions in the config.

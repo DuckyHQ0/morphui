@@ -40,7 +40,7 @@ export const Select = ({
       required={required}
     >
       <RadixSelect.Trigger
-        className="inline-flex items-center justify-center text-body rounded-in h-fit px-24 py-12 gap-32 bg-fg-2 border-stroke-2 text-text-1 shadow-fg-2"
+        className="inline-flex items-center justify-center text-body rounded-in h-fit px-24 py-12 gap-32 bg-fg-2 border border-stroke-2 text-text-1 shadow-fg-2 outline-none"
         aria-label={label}
       >
         <RadixSelect.Value placeholder={label} />
@@ -49,14 +49,17 @@ export const Select = ({
         </RadixSelect.Icon>
       </RadixSelect.Trigger>
       <RadixSelect.Portal>
-        <RadixSelect.Content className="overflow-hidden relative z-50 bg-fg-2 rounded-in backdrop-blur-main border border-stroke-2 shadow-fg-2 text-text-1 rounded-md data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1">
-          <RadixSelect.ScrollUpButton className="flex items-center justify-center h-fit py-6 bg-fg-2 backdrop-blur-md cursor-default border-b border-stroke-2">
+        <RadixSelect.Content
+          position="popper"
+          className="font-sans overflow-hidden relative z-50 bg-fg-2 mt-8 max-h-[436px] w-full rounded-in backdrop-blur-fg-2 border border-stroke-2 shadow-fg-2 text-text-1 rounded-md radix-state-open:animate-scale-in radix-state-closed:animate-scale-out"
+        >
+          <RadixSelect.ScrollUpButton className="flex items-center justify-center h-fit py-6 bg-fg-2 cursor-default border-b border-stroke-2">
             <HiChevronUp />
           </RadixSelect.ScrollUpButton>
-          <RadixSelect.Viewport className="flex flex-col gap-16 px-24 py-12">
+          <RadixSelect.Viewport className="flex flex-col gap-12 px-24 py-12">
             {children}
           </RadixSelect.Viewport>
-          <RadixSelect.ScrollDownButton className="flex items-center justify-center h-fit py-6 bg-fg-2 backdrop-blur-md cursor-default border-t border-stroke-2">
+          <RadixSelect.ScrollDownButton className="flex items-center justify-center h-fit py-6 bg-fg-2 cursor-default border-t border-stroke-2">
             <HiChevronDown />
           </RadixSelect.ScrollDownButton>
         </RadixSelect.Content>
@@ -71,11 +74,13 @@ export const SelectItem = React.forwardRef<
 >(({ children, ...props }, forwardedRef) => {
   return (
     <RadixSelect.Item
-      className="text-body font-sans leading-none text-text-1 flex items-center h-fit relative select-none cursor-pointer data-[disabled]:text-text-disabled radix-disabled:pointer-events-none radix-highlighted:outline-none radix-highlighted:text-selected radix-state-checked:text-selected duration-150 ease-out transition-colors"
+      className="flex items-center h-fit relative select-none cursor-pointer data-[disabled]:text-text-disabled radix-disabled:pointer-events-none radix-highlighted:outline-none radix-highlighted:text-selected radix-state-checked:text-selected duration-150 ease-out transition-colors"
       {...props}
       ref={forwardedRef}
     >
-      <RadixSelect.ItemText>{children}</RadixSelect.ItemText>
+      <RadixSelect.ItemText className="body text-text-1">
+        {children}
+      </RadixSelect.ItemText>
     </RadixSelect.Item>
   );
 });
