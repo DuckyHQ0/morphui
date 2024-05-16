@@ -81,7 +81,7 @@ module.exports = {
         "stroke-2": "rgba(255,255,255,0.04)",
         "text-1": "rgba(222,222,222,1)",
         "text-subtle": "rgba(222,222,222,0.75)",
-        "text-disabled": "rgba(255,255,255,0.30)",
+        "text-disabled": "rgba(255,255,255,0.25)",
         // colours
         selected: "#0db7ff",
         accent: "#0db7ff",

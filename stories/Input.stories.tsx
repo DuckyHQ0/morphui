@@ -8,6 +8,12 @@ const meta: Meta<typeof Input> = {
   component: Input,
   tags: ["autodocs"],
   title: "Input",
+  argTypes: {
+    type: {
+      options: ["text", "email", "password", "url", "search"],
+      control: {type: 'radio'}
+    }
+  }
 };
 export default meta;
 
@@ -17,7 +23,8 @@ type Story = StoryObj<typeof Input>;
 
 export const Default: Story = {
   args: {
-    placeholder: "Input",
-    disabled: false
+    placeholder: "Input box",
+    disabled: false,
+    type: "text"
   },
 };
