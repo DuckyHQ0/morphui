@@ -57,7 +57,7 @@ export const RadioGroupItem = ({
         disabled={disabled}
         required={required}
       >
-        <RadixRadioGroup.Indicator className="size-12 bg-accent disabled:bg-accent/30 rounded-24" />
+        <RadixRadioGroup.Indicator className="size-12 bg-accent disabled:bg-accent/30 rounded-24 radix-state-checked:animate-scale-in radix-state-unchecked:animate-scale-out" />
       </RadixRadioGroup.Item>
       <label
         htmlFor={id}

@@ -44,7 +44,7 @@ export const Select = ({
         aria-label={label}
       >
         <RadixSelect.Value placeholder={label} />
-        <RadixSelect.Icon>
+        <RadixSelect.Icon className="radix-state-open:rotate-180">
           <HiChevronDown />
         </RadixSelect.Icon>
       </RadixSelect.Trigger>
@@ -74,13 +74,11 @@ export const SelectItem = React.forwardRef<
 >(({ children, ...props }, forwardedRef) => {
   return (
     <RadixSelect.Item
-      className="flex items-center h-fit relative select-none cursor-pointer data-[disabled]:text-text-disabled radix-disabled:pointer-events-none radix-highlighted:outline-none radix-highlighted:text-selected radix-state-checked:text-selected duration-150 ease-out transition-colors"
+      className="body text-text-1 font-sans flex items-center h-fit relative select-none cursor-pointer data-[disabled]:text-text-disabled radix-disabled:pointer-events-none radix-highlighted:outline-none radix-highlighted:text-selected radix-state-checked:text-selected duration-150 ease-out transition-colors"
       {...props}
       ref={forwardedRef}
     >
-      <RadixSelect.ItemText className="body text-text-1">
-        {children}
-      </RadixSelect.ItemText>
+      <RadixSelect.ItemText>{children}</RadixSelect.ItemText>
     </RadixSelect.Item>
   );
 });
