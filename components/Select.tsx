@@ -40,7 +40,7 @@ export const Select = ({
       required={required}
     >
       <RadixSelect.Trigger
-        className="inline-flex items-center justify-center text-body rounded-in h-fit px-24 py-12 gap-32 bg-fg-2 border-stroke-2 text-text-1 shadow-fg-2"
+        className="inline-flex items-center justify-center text-body rounded-in h-fit px-24 py-12 gap-32 bg-fg-2 border border-stroke-2 text-text-1 shadow-fg-2"
         aria-label={label}
       >
         <RadixSelect.Value placeholder={label} />
@@ -49,7 +49,7 @@ export const Select = ({
         </RadixSelect.Icon>
       </RadixSelect.Trigger>
       <RadixSelect.Portal>
-        <RadixSelect.Content className="overflow-hidden bg-fg-2 rounded-in backdrop-blur-main border border-stroke-2 shadow-fg-2 text-text-1 rounded-md">
+        <RadixSelect.Content position="popper" className="overflow-hidden bg-fg-2 mt-8 rounded-in backdrop-blur-fg-2 border border-stroke-2 shadow-fg-2 text-text-1 rounded-md">
           <RadixSelect.ScrollUpButton className="flex items-center justify-center h-fit py-6 bg-fg-2 backdrop-blur-sm cursor-default border-b border-stroke-2">
             <HiChevronUp />
           </RadixSelect.ScrollUpButton>
