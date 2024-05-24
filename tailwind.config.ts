@@ -1,15 +1,14 @@
-import { WiHot } from "react-icons/wi";
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./stories/**/*.{js,ts,jsx,tsx,mdx}",
+    "./stories/**/*.{js,ts,jsx,tsx,mdx}", // Only used for storybook in the main MorphUI repo (you can remove this)
   ],
   theme: {
     fontSize: {
+      // Instead of using text-h1, etc, use the classes found in the tailwind input file (/app/globals.css)
       h0: "100px",
       h1: "50px",
       h2: "36px",
@@ -57,49 +56,64 @@ module.exports = {
         "0px -6px 24px -2px rgba(0, 0, 0, 0.14) inset, 0px 0px 56px 0px rgba(0, 0, 0, 0.08)",
     },
     fontFamily: {
-      // Don't use normal tailwind fontsize or fontfamily in your classnames, use the @apply values found in globals.css
+      // Instead of using font-mono, etc, use the classes found in the tailwind input file (for nextjs, /app/globals.css)
       sans: ["var(--font-outfit)"],
       mono: ["var(--font-jetbrains-mono)"],
     },
+    backgroundImage: {
+      "fg-1":
+        "linear-gradient(to bottom,rgba(15, 15, 15, 0.75),rgba(15, 15, 15, 0.9))",
+      "fg-2":
+        "linear-gradient(to bottom,rgba(122,122,122,0.13),rgba(122,122,122,0.05))",
+      "fg-2-active":
+        "linear-gradient(to bottom,rgba(122,122,122,0.27),rgba(122,122,122,0.18))",
+      "fg-2-disabled":
+        "linear-gradient(to bottom,rgba(122,122,122,0.03),rgba(122,122,122,0.07))",
+      "fg-3":
+        "linear-gradient(to bottom,rgba(12, 12, 12, 0.45),rgba(0, 0, 0, 0.5))",
+    },
+    colors: {
+      // ui styles
+      "bg-1": "rgba(7,7,7,1)",
+      "stroke-1": "rgba(255,255,255,0.09)",
+      "stroke-2": "rgba(255,255,255,0.04)",
+      "text-1": "rgba(222,222,222,1)",
+      "text-subtle": "rgba(222,222,222,0.75)",
+      "text-disabled": "rgba(255,255,255,0.30)",
+      // colours
+      selected: "#0db7ff",
+      accent: "#0db7ff",
+      "brand-blue": "#0db7ff",
+      "brand-blue-2": "#007bff",
+      "brand-purple": "#4e00ff",
+      danger: "#F5254A",
+      warning: "#EACA22",
+      success: "#26D958",
+      blue: "#0784F6",
+      purple: "#BC4DFF",
+      white: "#ffffff",
+      black: "#000000",
+      transparent: "#00000000",
+    },
     extend: {
-      backgroundImage: {
-        "fg-1":
-          "linear-gradient(to bottom,rgba(15, 15, 15, 0.75),rgba(15, 15, 15, 0.9))",
-        "fg-2":
-          "linear-gradient(to bottom,rgba(122,122,122,0.13),rgba(122,122,122,0.05))",
-        "fg-2-active":
-          "linear-gradient(to bottom,rgba(122,122,122,0.27),rgba(122,122,122,0.18))",
-        "fg-2-disabled":
-          "linear-gradient(to bottom,rgba(122,122,122,0.03),rgba(122,122,122,0.07))",
-        "fg-3":
-          "linear-gradient(to bottom,rgba(12, 12, 12, 0.45),rgba(0, 0, 0, 0.5))",
-      },
-      colors: {
-        // ui styles
-        "bg-1": "rgba(7,7,7,1)",
-        "stroke-1": "rgba(255,255,255,0.09)",
-        "stroke-2": "rgba(255,255,255,0.04)",
-        "text-1": "rgba(222,222,222,1)",
-        "text-subtle": "rgba(222,222,222,0.75)",
-        "text-disabled": "rgba(255,255,255,0.25)",
-        // colours
-        selected: "#0db7ff",
-        accent: "#0db7ff",
-        "brand-blue": "#0db7ff",
-        "brand-blue-2": "#007bff",
-        "brand-purple": "#4e00ff",
-        danger: "#F5254A",
-        warning: "#EACA22",
-        success: "#26D958",
-        blue: "#0784F6",
-        purple: "#BC4DFF",
-        white: "#ffffff",
-        black: "#000000",
-      },
       backdropBlur: {
         "fg-1": "128px",
         "fg-2": "32px",
         "fg-3": "32px",
+      },
+      keyframes: {
+        "scale-in": {
+          from: { opacity: "0", transform: " scale(0.9)" },
+          to: { opacity: "1", transform: "scale(1)" },
+        },
+        "scale-out": {
+          from: { opacity: "1", transform: "scale(1)" },
+          to: { opacity: "0", transform: "scale(0.9)" },
+        },
+      },
+      animation: {
+        "scale-in": "scale-in 150ms ease-out",
+        "scale-out": "scale-out 150ms ease-out",
       },
     },
   },

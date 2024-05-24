@@ -22,7 +22,7 @@ export const Checkbox = ({
         required={required}
         id="c1"
       >
-        <RadixCheckbox.Indicator className="text-brand-blue radix-disabled:text-brand-blue/30">
+        <RadixCheckbox.Indicator className="text-brand-blue radix-disabled:text-brand-blue/30 radix-state-checked:animate-scale-in radix-state-unchecked:animate-scale-out">
           <HiMiniCheck />
         </RadixCheckbox.Indicator>
       </RadixCheckbox.Root>

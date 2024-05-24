@@ -30,9 +30,7 @@ const preview: Preview = {
   },
   decorators: [
     (Story) => (
-      <div
-        className={`${outfit.className} ${outfit.variable} font-sans text-text-1`}
-      >
+      <div className={`${jetBrainsMono.variable} ${outfit.variable} font-sans`}>
         <Story />
       </div>
     ),
