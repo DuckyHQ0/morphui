@@ -46,6 +46,10 @@ And add this className to your main body tag:
 className={`${jetBrainsMono.variable} ${outfit.variable} font-sans text-text-1`}
 ```
 
+#### RADIX FONT ISSUE
+
+Inside Radix primitive components, like Select, or Dialogs, the font doesn't load correctly. With Next.js, you can import `Outfit` from `next/font/google`, and use the same method above inside the actual component(__this comes default!__). Not sure how to fix this with other font providers yet.
+
 #### Other frameworks
 
 You could use Google Fonts, or FontSource, but make sure the fonts work with Tailwind CSS, so they can be used with the fontFamily definitions in the config.
