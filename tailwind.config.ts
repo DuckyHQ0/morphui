@@ -8,7 +8,7 @@ module.exports = {
   ],
   theme: {
     fontSize: {
-      // Instead of using text-h1, etc, use the classes found in the tailwind input file (/app/globals.css)
+      // Instead of using text-h1, etc, use the classes found in the tailwind input file (Next = /app/globals.css)
       h0: "100px",
       h1: "50px",
       h2: "36px",
@@ -121,12 +121,17 @@ module.exports = {
           from: { opacity: "0", transform: "translateY(12px)" },
           to: { opacity: "1", transform: "translateY(-12px)" },
         },
+        "rotate-360": {
+          from: { rotate: "0deg" },
+          to: { rotate: "360deg" },
+        },
       },
       animation: {
         "scale-in": "scale-in 150ms ease-out",
         "scale-out": "scale-out 150ms ease-out",
         "fade-in": "fade-in 150ms ease-out",
         "move-in": "move-in 150ms ease-out",
+        "rotate-slow": "rotate-360 8s linear infinite",
       },
     },
   },
