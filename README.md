@@ -1,85 +1,30 @@
-# MorphUI
+# React + TypeScript + Vite
 
-## Version 0.2 Beta (Unfinished!)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-A modern, open source React UI kit for DuckyHQ projects.
+Currently, two official plugins are available:
 
-Figma design file with components is [here](https://www.figma.com/community/file/1322693203140901897/morphui-wip).
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-### How this project works
+## Expanding the ESLint configuration
 
-This is using Next.js, and Storybook. You're gonna wanna use `npm run storybook` to start the dev server. All the components are inside the components folder. And the stories are separate, in the stories folder.
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-### Installation for your own projects
+- Configure the top-level `parserOptions` property like this:
 
-This will not be an NPM module. What you have to do is get this source code (clone, or download zip), then copy the Tailwind input file (/app/globals.css), the Tailwind config (tailwind.config.ts), then the entire components folder, all into your own project, replacing the old files. Then just use the components like you normally would, and the Tailwind classes.
-
-### Tailwind config info
-
-The spacing system is literal, so `p-32` equals exactly 32 pixels: `padding: 32px;`.
-
-### Fonts
-
-#### Next.js
-
-Put this code inside your `layout.tsx`:
-
-```tsx
-import { Outfit, JetBrains_Mono } from "next/font/google";
-
-const outfit = Outfit({
-  subsets: ["latin"],
-  variable: "--font-outfit",
-  weight: ["400", "500", "600", "700"],
-});
-
-const jetBrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
-  weight: ["400"],
-});
-```
-
-And add this className to your main body tag:
-
-```tsx
-className={`${jetBrainsMono.variable} ${outfit.variable} font-sans text-text-1`}
-```
-
-#### Astro
-
-Install fontsource font:
-
-```bash
-pnpm add @fontsource-variable/outfit
-```
-
-Import into your main layout:
-
-```astro
----
-import "@fontsource-variable/outfit";
----
-```
-
-Add into your Tailwind config theme:
-
-```ts
-import defaultTheme from "tailwindcss/defaultTheme";
-
-fontFamily: {
-  sans: ["'Outfit Variable'", ...defaultTheme.fontFamily.sans],
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
+    tsconfigRootDir: __dirname,
+  },
 }
 ```
 
-#### RADIX FONT ISSUE
-
-Inside Radix primitive components, like Select, or Dialogs, the font doesn't load correctly. With Next.js, you can import `Outfit` from `next/font/google`, and use the same method above inside the actual component(**this comes default!**). Not sure how to fix this with other font providers yet.
-
-#### Other frameworks
-
-You could use Google Fonts, or FontSource, but make sure the fonts work with Tailwind CSS, so they can be used with the fontFamily definitions in the config.
-
-```
-
-```
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
