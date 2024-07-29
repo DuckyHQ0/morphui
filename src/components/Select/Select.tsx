@@ -24,13 +24,13 @@ export const Select = ({ label, children, ...props }: SelectProps) => {
           position="popper"
           className="overflow-hidden relative z-50 mt-8 w-full rounded-md border bg-fg-2 max-h-[436px] rounded-in backdrop-blur-fg-2 border-stroke-2 shadow-fg-2 text-text-1 data-[state=open]:animate-scale-in data-[state=closed]:animate-scale-out"
         >
-          <RadixSelect.ScrollUpButton className="flex justify-center items-center py-6 border-b cursor-default h-fit bg-fg-2 border-stroke-2">
+          <RadixSelect.ScrollUpButton className="flex justify-center items-center py-6 border-b cursor-default h-fit border-stroke-2">
             <ChevronUpIcon />
           </RadixSelect.ScrollUpButton>
           <RadixSelect.Viewport className="flex flex-col gap-12 px-24 py-12">
             {children}
           </RadixSelect.Viewport>
-          <RadixSelect.ScrollDownButton className="flex justify-center items-center py-6 border-t cursor-default h-fit bg-fg-2 border-stroke-2">
+          <RadixSelect.ScrollDownButton className="flex justify-center items-center py-6 border-t cursor-default h-fit border-stroke-2">
             <ChevronDownIcon />
           </RadixSelect.ScrollDownButton>
         </RadixSelect.Content>

@@ -7,7 +7,7 @@ export default create({
   fontCode: "sans-serif",
 
   brandTitle: "MorphUI",
-  brandImage: "/storybook-brandlogo.png",
+  brandImage: "/storybook-brand-logo.png",
   brandTarget: "_self",
 
   //
