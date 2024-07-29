@@ -7,7 +7,7 @@ const ArchiveBoxIcon = () => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="currentColor"
-      className="size-24"
+      className="size-20"
     >
       <path
         fillRule="evenodd"
@@ -65,7 +65,7 @@ Text.args = {
 export const TextIcon: Story = (args: ButtonProps) => (
   <Button {...args}>
     Button
-    <ArchiveBoxIcon className="size-20" />
+    <ArchiveBoxIcon />
   </Button>
 );
 TextIcon.args = {

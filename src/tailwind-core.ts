@@ -50,23 +50,13 @@ module.exports = {
         "0px -6px 24px -2px rgba(0, 0, 0, 0.14) inset, 0px 0px 56px 0px rgba(0, 0, 0, 0.08)",
     },
     fontFamily: {
-      sans: [
-        "'Outfit Variable'",
-        "'Outfit'",
-        "var(--font-outfit)",
-        ...defaultTheme.fontFamily.sans,
-      ],
+      sans: ["'Outfit Variable'", "'Outfit'", ...defaultTheme.fontFamily.sans],
       mono: [
         "'JetBrains Mono Variable'",
         "'JetBrains Mono'",
-        "var(--font-jetbrains-mono)",
         ...defaultTheme.fontFamily.mono,
       ],
-      hanson: [
-        "'Hanson'",
-        "var(--font-hanson)",
-        ...defaultTheme.fontFamily.sans,
-      ],
+      hanson: ["'Hanson'", ...defaultTheme.fontFamily.sans],
     },
     backgroundImage: {
       "fg-1":

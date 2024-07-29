@@ -18,7 +18,7 @@
     @apply text-h3 font-semibold font-sans leading-[110%];
   }
 
-  .strong-body {
+  .strong {
     @apply text-strong-body font-semibold font-sans leading-[133%];
   }
 
@@ -27,7 +27,7 @@
     @apply text-body font-normal font-sans leading-[26px];
   }
 
-  .subtext {
+  .sub {
     @apply text-sub font-normal font-sans leading-[26px];
   }
 
