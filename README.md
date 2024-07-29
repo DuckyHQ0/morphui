@@ -1,30 +1,19 @@
-# React + TypeScript + Vite
+# MorphUI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## v0.3-beta
 
-Currently, two official plugins are available:
+A modern, open source React UI kit for DuckyHQ projects.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Figma design file with components, styles, and design documentation is [here](https://www.figma.com/community/file/1322693203140901897/morphui-wip).
 
-## Expanding the ESLint configuration
+### Project
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+This project uses React, Storybook, Vite, and Tailwind. To run the Storybook your self, use `pnpm storybook`. Components, stories, and Tailwind theming stuff are all in the `src` directory.
 
-- Configure the top-level `parserOptions` property like this:
+### Installation
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+This will soon be an npm module. Right now, you can copy the Tailwind files and components your self.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Tailwind Info
+
+The spacing system is literal, so `p-32` equals exactly 32 pixels: `padding: 32px;`.

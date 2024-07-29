@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 tailwind-output.css
+.cache/*
 
 # Editor directories and files
 .vscode/*
