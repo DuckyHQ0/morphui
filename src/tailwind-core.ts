@@ -1,16 +1,12 @@
-import defaultTheme from "tailwindcss/defaultTheme";
-
-module.exports = {
+export const tailwindCore = {
   theme: {
     fontSize: {
-      h0: "100px",
-      h1: "50px",
-      h2: "36px",
-      h3: "21px",
-      "strong-body": "16px",
-      body: "15px",
-      sub: "12.4px",
-      mono: "13px",
+      h1: "3.125rem",
+      h2: "2.25rem",
+      h3: "1.313rem",
+      body: "0.938rem",
+      sub: "0.775rem",
+      mono: "0.813rem",
     },
     spacing: {
       256: "256px",
@@ -44,19 +40,47 @@ module.exports = {
       out: "16px",
       in: "9px",
       small: "7px",
+      full: "9999px",
     },
     boxShadow: {
       "fg-2":
         "0px -6px 24px -2px rgba(0, 0, 0, 0.14) inset, 0px 0px 56px 0px rgba(0, 0, 0, 0.08)",
     },
     fontFamily: {
-      sans: ["'Outfit Variable'", "'Outfit'", ...defaultTheme.fontFamily.sans],
+      sans: [
+        "'Outfit Variable'",
+        "'Outfit'",
+        "ui-sans-serif",
+        "system-ui",
+        "sans-serif",
+        "'Apple Color Emoji'",
+        "'Segoe UI Emoji'",
+        "'Segoe UI Symbol'",
+        "'Noto Color Emoji'",
+      ],
       mono: [
         "'JetBrains Mono Variable'",
         "'JetBrains Mono'",
-        ...defaultTheme.fontFamily.mono,
+        "ui-monospace",
+        "SFMono-Regular",
+        "Menlo",
+        "Monaco",
+        "Consolas",
+        "'Liberation Mono'",
+        "'Courier New'",
+        "monospace",
       ],
-      hanson: ["'Hanson'", ...defaultTheme.fontFamily.sans],
+      hanson: [
+        "'Hanson'",
+        "'Outfit'",
+        "ui-sans-serif",
+        "system-ui",
+        "sans-serif",
+        "'Apple Color Emoji'",
+        "'Segoe UI Emoji'",
+        "'Segoe UI Symbol'",
+        "'Noto Color Emoji'",
+      ],
     },
     backgroundImage: {
       "fg-1":
@@ -71,14 +95,12 @@ module.exports = {
         "linear-gradient(to bottom,rgba(12, 12, 12, 0.45),rgba(0, 0, 0, 0.5))",
     },
     colors: {
-      // ui styles
       "bg-1": "rgba(7,7,7,1)",
       "stroke-1": "rgba(255,255,255,0.09)",
       "stroke-2": "rgba(255,255,255,0.04)",
       "text-1": "rgba(222,222,222,1)",
       "text-subtle": "rgba(222,222,222,0.75)",
       "text-disabled": "rgba(255,255,255,0.30)",
-      // colours
       selected: "#0db7ff",
       accent: "#0db7ff",
       "brand-blue": "#0db7ff",

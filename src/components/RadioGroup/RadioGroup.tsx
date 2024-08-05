@@ -15,24 +15,26 @@ export const RadioGroup = ({ children, ...props }: RadioGroupProps) => {
   );
 };
 
-export type RadioGroupItemProps = RadixRadioGroupItemProps & { label: string };
+export type RadioGroupItemProps = RadixRadioGroupItemProps & {
+  label: string;
+  value: string;
+};
 
 export const RadioGroupItem = ({
   label = "Radio item",
+  value,
   ...props
 }: RadioGroupItemProps) => {
   return (
-    <div className="flex gap-8">
+    <div className="flex gap-8 items-center">
       <RadixRadioGroup.Item
-        className="flex justify-center items-center border size-24 rounded-24 bg-fg-2 border-stroke-2 shadow-fg-2 disabled:cursor-not-allowed disabled:bg-fg-2-disabled"
+        className="flex justify-center items-center border size-32 rounded-24 bg-fg-2 border-stroke-2 shadow-fg-2 disabled:cursor-not-allowed disabled:bg-fg-2-disabled"
+        value={value}
         {...props}
       >
-        <RadixRadioGroup.Indicator className="size-12 bg-accent data-[disabled]:bg-accent/30 rounded-24 data-[state=checked]:animate-scale-in data-[state=unchecked]:animate-scale-out" />
+        <RadixRadioGroup.Indicator className="size-16 bg-accent data-[disabled]:bg-accent/30 rounded-full data-[state=checked]:animate-scale-in data-[state=unchecked]:animate-scale-out" />
       </RadixRadioGroup.Item>
-      <label
-        htmlFor={""}
-        className="body text-text-1 disabled:text-text-disabled"
-      >
+      <label htmlFor={value} className="text-body leading-none text-text-1">
         {label}
       </label>
     </div>

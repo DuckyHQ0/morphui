@@ -11,7 +11,7 @@ export const Select = ({ label, children, ...props }: SelectProps) => {
   return (
     <RadixSelect.Root {...props}>
       <RadixSelect.Trigger
-        className="inline-flex gap-32 justify-center items-center px-24 py-12 border outline-none text-body rounded-in h-fit bg-fg-2 border-stroke-2 text-text-1 shadow-fg-2 data-[disabled]:bg-fg-2-disabled data-[disabled]:text-text-disabled data-[disabled]:cursor-not-allowed"
+        className="inline-flex gap-32 justify-center items-center px-24 h-[40px] border outline-none text-body rounded-in bg-fg-2 border-stroke-2 text-text-1 shadow-fg-2 data-[disabled]:bg-fg-2-disabled data-[disabled]:text-text-disabled data-[disabled]:cursor-not-allowed"
         aria-label={label}
       >
         <RadixSelect.Value placeholder={label} />
@@ -22,12 +22,12 @@ export const Select = ({ label, children, ...props }: SelectProps) => {
       <RadixSelect.Portal>
         <RadixSelect.Content
           position="popper"
-          className="overflow-hidden relative z-50 mt-8 w-full rounded-md border bg-fg-2 max-h-[436px] rounded-in backdrop-blur-fg-2 border-stroke-2 shadow-fg-2 text-text-1 data-[state=open]:animate-scale-in data-[state=closed]:animate-scale-out"
+          className="overflow-hidden relative z-50 mt-8 w-full rounded-md border bg-fg-2 max-h-[384px] rounded-in backdrop-blur-fg-2 border-stroke-2 shadow-fg-2 text-text-1 data-[state=open]:animate-scale-in data-[state=closed]:animate-scale-out"
         >
           <RadixSelect.ScrollUpButton className="flex justify-center items-center py-6 border-b cursor-default h-fit border-stroke-2">
             <ChevronUpIcon />
           </RadixSelect.ScrollUpButton>
-          <RadixSelect.Viewport className="flex flex-col gap-12 px-24 py-12">
+          <RadixSelect.Viewport className="flex flex-col gap-12 px-24 py-16">
             {children}
           </RadixSelect.Viewport>
           <RadixSelect.ScrollDownButton className="flex justify-center items-center py-6 border-t cursor-default h-fit border-stroke-2">
@@ -45,7 +45,7 @@ export const SelectItem = React.forwardRef<
 >(({ children, ...props }, forwardedRef) => {
   return (
     <RadixSelect.Item
-      className="body text-text-1 font-sans flex items-center h-fit relative select-none cursor-pointer data-[disabled]:text-text-disabled data-[disabled]:pointer-events-none data-[highlighted]:outline-none data-[highlighted]:text-selected data-[state=checked]:text-selected duration-150 ease-out transition-colors"
+      className="text-body leading-none text-text-1 font-sans flex items-center h-fit relative select-none cursor-pointer data-[disabled]:text-text-disabled data-[disabled]:pointer-events-none data-[highlighted]:outline-none data-[highlighted]:text-selected data-[state=checked]:text-selected duration-150 ease-out transition-colors"
       {...props}
       ref={forwardedRef}
     >
@@ -56,7 +56,7 @@ export const SelectItem = React.forwardRef<
 
 export const SelectGroup = ({ children }: { children: ReactNode }) => {
   return (
-    <RadixSelect.Group className="flex flex-col gap-12">
+    <RadixSelect.Group className="flex flex-col gap-16">
       {children}
     </RadixSelect.Group>
   );

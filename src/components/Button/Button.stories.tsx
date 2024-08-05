@@ -1,17 +1,17 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Button, ButtonProps } from "./Button";
 
-const ArchiveBoxIcon = () => {
+const BtnIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
+      viewBox="0 0 20 20"
       fill="currentColor"
       className="size-20"
     >
       <path
         fillRule="evenodd"
-        d="M10.5 3.798v5.02a3 3 0 0 1-.879 2.121l-2.377 2.377a9.845 9.845 0 0 1 5.091 1.013 8.315 8.315 0 0 0 5.713.636l.285-.071-3.954-3.955a3 3 0 0 1-.879-2.121v-5.02a23.614 23.614 0 0 0-3 0Zm4.5.138a.75.75 0 0 0 .093-1.495A24.837 24.837 0 0 0 12 2.25a25.048 25.048 0 0 0-3.093.191A.75.75 0 0 0 9 3.936v4.882a1.5 1.5 0 0 1-.44 1.06l-6.293 6.294c-1.62 1.621-.903 4.475 1.471 4.88 2.686.46 5.447.698 8.262.698 2.816 0 5.576-.239 8.262-.697 2.373-.406 3.092-3.26 1.47-4.881L15.44 9.879A1.5 1.5 0 0 1 15 8.818V3.936Z"
+        d="M15.312 11.424a5.5 5.5 0 0 1-9.201 2.466l-.312-.311h2.433a.75.75 0 0 0 0-1.5H3.989a.75.75 0 0 0-.75.75v4.242a.75.75 0 0 0 1.5 0v-2.43l.31.31a7 7 0 0 0 11.712-3.138.75.75 0 0 0-1.449-.39Zm1.23-3.723a.75.75 0 0 0 .219-.53V2.929a.75.75 0 0 0-1.5 0V5.36l-.31-.31A7 7 0 0 0 3.239 8.188a.75.75 0 1 0 1.448.389A5.5 5.5 0 0 1 13.89 6.11l.311.31h-2.432a.75.75 0 0 0 0 1.5h4.243a.75.75 0 0 0 .53-.219Z"
         clipRule="evenodd"
       />
     </svg>
@@ -65,7 +65,7 @@ Text.args = {
 export const TextIcon: Story = (args: ButtonProps) => (
   <Button {...args}>
     Button
-    <ArchiveBoxIcon />
+    <BtnIcon />
   </Button>
 );
 TextIcon.args = {
@@ -79,7 +79,7 @@ TextIcon.args = {
 
 export const Icon: Story = (args: ButtonProps) => (
   <Button {...args}>
-    <ArchiveBoxIcon className="size-20" />
+    <BtnIcon />
   </Button>
 );
 Icon.args = {

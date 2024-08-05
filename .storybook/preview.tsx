@@ -1,5 +1,5 @@
 import type { Preview } from "@storybook/react";
-import "../src/tailwind-output.css";
+import "../src/tailwind.css";
 import "@fontsource-variable/outfit";
 import "@fontsource-variable/jetbrains-mono";
 import MorphUITheme from "./morphui-theme";

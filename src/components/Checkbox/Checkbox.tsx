@@ -1,25 +1,18 @@
 import * as RadixCheckbox from "@radix-ui/react-checkbox";
 import { CheckboxProps as RadixCheckboxProps } from "@radix-ui/react-checkbox";
 
-export type CheckboxProps = RadixCheckboxProps & {
-  label: string;
-};
+export type CheckboxProps = RadixCheckboxProps;
 
-export const Checkbox = ({ label, ...props }: CheckboxProps) => {
+export const Checkbox = ({ ...props }: CheckboxProps) => {
   return (
-    <div className="flex gap-8">
-      <RadixCheckbox.Root
-        className="flex justify-center items-center w-24 h-24 border bg-fg-2 data-[disabled]:bg-fg-2-disabled data-[disabled]:cursor-not-allowed border-stroke-2 rounded-small"
-        {...props}
-      >
-        <RadixCheckbox.Indicator className="text-brand-blue data-[disabled]:text-brand-blue/30 data-[state=checked]:animate-scale-in data-[state=unchecked]:animate-scale-out">
-          <CheckIcon />
-        </RadixCheckbox.Indicator>
-      </RadixCheckbox.Root>
-      <label className="text-body text-text-1" htmlFor="c1">
-        {label}
-      </label>
-    </div>
+    <RadixCheckbox.Root
+      className="flex justify-center items-center size-32 border bg-fg-2 data-[disabled]:bg-fg-2-disabled data-[disabled]:cursor-not-allowed border-stroke-2 rounded-in"
+      {...props}
+    >
+      <RadixCheckbox.Indicator className="text-brand-blue data-[disabled]:text-brand-blue/30 data-[state=checked]:animate-scale-in data-[state=unchecked]:animate-scale-out">
+        <CheckIcon />
+      </RadixCheckbox.Indicator>
+    </RadixCheckbox.Root>
   );
 };
 
@@ -29,7 +22,7 @@ export const CheckIcon = () => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
       fill="currentColor"
-      className="size-16"
+      className="size-20"
     >
       <path
         fillRule="evenodd"

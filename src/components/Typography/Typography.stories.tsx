@@ -16,13 +16,13 @@ export const All: Story = {
     return (
       <div className="flex flex-col gap-24">
         <h1 className="font-hanson text-[96px]">Display</h1>
-        <h1>Heading 1</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <p className="strong">Body</p>
-        <p>Body</p>
-        <p className="sub">Subtext</p>
-        <code>Mono</code>
+        <h1 className="text-h1 font-medium">Heading 1</h1>
+        <h2 className="text-h2 font-medium">Heading 2</h2>
+        <h3 className="text-h3 font-medium">Heading 3</h3>
+        <p className="text-body font-semibold">Strong Body</p>
+        <p className="text-body font-normal">Body</p>
+        <p className="text-sub">Subtext</p>
+        <code className="text-mono font-mono">Mono</code>
       </div>
     );
   },

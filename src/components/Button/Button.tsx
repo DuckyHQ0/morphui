@@ -3,7 +3,7 @@ import { cva, VariantProps } from "class-variance-authority";
 
 const variants = cva(
   [
-    "text-body border w-fit h-[42px] shadow-fg flex items-center gap-6 text-white",
+    "text-body leading-none border w-fit h-[40px] shadow-fg flex items-center gap-6",
     "ease-out duration-150",
     "enabled:hover:-translate-y-[2px] enabled:active:translate-y-6",
     "disabled:cursor-not-allowed disabled:text-white/30",
@@ -22,9 +22,9 @@ const variants = cva(
         danger: [],
       },
       contentInside: {
-        text: ["px-24"],
-        textIcon: ["px-20"],
-        icon: ["px-12"],
+        text: ["px-20"],
+        textIcon: ["px-16"],
+        icon: ["px-8"],
       },
       roundedLevel: {
         in: ["rounded-in"],
@@ -37,7 +37,7 @@ const variants = cva(
         colour: "primary",
         variantType: "solid",
         className: [
-          "bg-brand-blue/75 border-stroke-2 text-white",
+          "bg-brand-blue/85 border-stroke-2 text-black",
           "enabled:hover:bg-brand-blue enabled:active:bg-brand-blue/50",
           "disabled:bg-brand-blue/25",
         ],
@@ -75,7 +75,7 @@ const variants = cva(
         colour: "success",
         variantType: "solid",
         className: [
-          "bg-green/75 border-stroke-2 text-white",
+          "bg-green/85 border-stroke-2 text-black",
           "enabled:hover:bg-green enabled:active:bg-green/50",
           "disabled:bg-green/25",
         ],
@@ -94,7 +94,7 @@ const variants = cva(
         colour: "warning",
         variantType: "solid",
         className: [
-          "bg-yellow/75 border-stroke-2 text-white",
+          "bg-yellow/85 border-stroke-2 text-black",
           "enabled:hover:bg-yellow enabled:active:bg-yellow/50",
           "disabled:bg-yellow/25",
         ],
@@ -113,7 +113,7 @@ const variants = cva(
         colour: "danger",
         variantType: "solid",
         className: [
-          "bg-red/75 border-stroke-2 text-white",
+          "bg-red/85 border-stroke-2 text-white",
           "enabled:hover:bg-red enabled:active:bg-red/50",
           "disabled:bg-red/25",
         ],
@@ -134,14 +134,19 @@ const variants = cva(
       contentInside: "text",
       roundedLevel: "in",
     },
-  }
+  },
 );
 
 export type ButtonVariantProps = VariantProps<typeof variants>;
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof variants> {}
+    VariantProps<typeof variants> {
+  variantType?: "solid" | "soft";
+  colour?: "primary" | "secondary" | "success" | "warning" | "danger";
+  contentInside?: "text" | "textIcon" | "icon";
+  roundedLevel?: "in" | "out";
+}
 export const Button = ({
   children,
   variantType,

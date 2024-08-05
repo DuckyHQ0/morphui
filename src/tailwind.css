@@ -2,51 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  h1,
-  .h1 {
-    @apply text-h1 font-bold font-sans leading-[110%];
-  }
-
-  h2,
-  .h2 {
-    @apply text-h2 font-semibold font-sans leading-[110%];
-  }
-
-  h3,
-  .h3 {
-    @apply text-h3 font-semibold font-sans leading-[110%];
-  }
-
-  .strong {
-    @apply text-strong-body font-semibold font-sans leading-[133%];
-  }
-
-  p,
-  .body {
-    @apply text-body font-normal font-sans leading-[26px];
-  }
-
-  .sub {
-    @apply text-sub font-normal font-sans leading-[26px];
-  }
-
-  code,
-  .mono {
-    @apply text-mono font-mono leading-[150%];
-  }
-}
-
-@layer utilities {
-  .hover-effect-scale {
-    @apply hover:scale-[1.1] duration-150 ease-out active:scale-[0.9];
-  }
-
-  .hover-effect-colour {
-    @apply hover:text-[#0db7ff] duration-150 ease-out active:text-[#0db7ff]/75;
-  }
-}
-
 @font-face {
   font-family: "Hanson";
   src:
